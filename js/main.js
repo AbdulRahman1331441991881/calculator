@@ -7,21 +7,21 @@ let buttonArray = [
   "7",
   "8",
   "9",
-  "/",
-  "V",
+  "&#xf7;",
+  "&#x221A;",
   "4",
   "5",
   "6",
-  "*",
+  "&#xd7;",
   "%",
   "1",
   "2",
   "3",
   "-",
-  "1/*",
+  "&#xb2;",
   "0",
   ".",
-  "+/-",
+  "&#xb1;",
   "+",
   "=",
   "&#8362; to &#36;",
@@ -59,11 +59,11 @@ buttons.forEach((Element) => {
     } else if (element.target.innerHtml === "MR ") {
     } else if (element.target.innerHTML === "%") {
       result.value = result.value / 100;
-    } else if (element.target.innerHTML === "+/-") {
+    } else if (element.target.innerHTML === "±") {
       result.value = -result.value;
-    } else if (element.target.innerHTML === "V") {
+    } else if (element.target.innerHTML === "√") {
       result.value = +Math.sqrt(result.value);
-    } else if (element.target.innerHTML === "1/*") {
+    } else if (element.target.innerHTML === "²") {
       result.value = result.value * result.value;
     } else if (element.target.innerHTML === "₪ to $") {
       result.value = +result.value / 3.81;
@@ -92,4 +92,5 @@ let calc = () => {
     result.value = "Error";
   }
 };
+
 
